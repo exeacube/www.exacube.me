@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/shop.css" />
+                <script src="/iconify/iconify.min.js"></script>
+        <title>Exacube — Nos services</title>
+    </head>
+    <body>
+        <%- include('partials/navbar') %>
+
+        <main id="services-page">
+
+            <!-- ═══ HERO ═══ -->
+            <section id="services-hero">
+                <div class="services-hero-bg">
+                    <div class="sh-grid"></div>
+                    <div class="sh-glow"></div>
+                </div>
+                <div class="services-hero-content">
+                    <span class="section-label">
+                        <span class="iconify" data-icon="mdi:store-outline"></span>
+                        Nos services
+                    </span>
+                    <h1 class="services-hero-title">Choisissez votre <span class="services-hero-accent">formule</span></h1>
+                    <p class="services-hero-desc">Hébergement Minecraft gratuit à vie ou infrastructure sur mesure — on a ce qu'il faut.</p>
+                </div>
+            </section>
+
+            <!-- ═══ PLANS ═══ -->
+            <section id="services-plans">
+                <div class="services-container">
+                    <div class="services-plans-grid">
+
+                        <!-- GRATUIT -->
+                        <div class="splan-card splan-featured">
+                            <div class="splan-badge">
+                                <span class="iconify" data-icon="mdi:star"></span> Populaire
+                            </div>
+                            <div class="splan-header">
+                                <div class="splan-icon">
+                                    <span class="iconify" data-icon="mdi:gift-outline"></span>
+                                </div>
+                                <div>
+                                    <h2 class="splan-name">Gratuit</h2>
+                                    <p class="splan-tagline">Pour toujours, sans conditions</p>
+                                </div>
+                            </div>
+                            <div class="splan-price">
+                                <span class="splan-amount">0€</span>
+                                <span class="splan-period">pour toujours</span>
+                            </div>
+                            <p class="splan-desc">Parfait pour débuter et jouer avec tes amis sans dépenser un centime.</p>
+                            <ul class="splan-features">
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="streamline-freehand:memory-computer-ram"></span>
+                                    <span>3 Go de RAM</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="streamline-freehand:microprocessor-computer-chip-flash"></span>
+                                    <span>2 cœurs CPU</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="cbi:seagate-ssd"></span>
+                                    <span>16 Go de stockage SSD</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="la:users"></span>
+                                    <span>Slots joueurs illimités</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="codicon:server-process"></span>
+                                    <span>Panel Custom inclus</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:server-shield"></span>
+                                    <span>Protection DDoS</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:web"></span>
+                                    <span>Domaine offert</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:backup-restore"></span>
+                                    <span>Backups automatiques</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:map-marker-outline"></span>
+                                    <span>Hébergé en France 🇫🇷</span>
+                                </li>
+                                <li class="sf-limit">
+                                    <span class="iconify" data-icon="mdi:minus-circle-outline"></span>
+                                    <span>1 serveur par compte</span>
+                                </li>
+                            </ul>
+                            <a href="/services/free-server" class="splan-btn splan-btn-primary">
+                                <span class="iconify" data-icon="mdi:rocket-launch-outline"></span>
+                                Commencer gratuitement
+                            </a>
+                        </div>
+
+                        <!-- PRIVATE NODE -->
+                        <div class="splan-card">
+                            <div class="splan-header">
+                                <div class="splan-icon">
+                                    <span class="iconify" data-icon="mdi:server-network"></span>
+                                </div>
+                                <div>
+                                    <h2 class="splan-name">Private Node</h2>
+                                    <p class="splan-tagline">Réseau multi-serveurs privé</p>
+                                </div>
+                            </div>
+                            <div class="splan-price">
+                                <span class="splan-from">à partir de</span>
+                                <span class="splan-amount">4,99€</span>
+                                <span class="splan-period">/ mois</span>
+                            </div>
+                            <p class="splan-desc">Un réseau privé de serveurs interconnectés via BungeeCord, pour les projets ambitieux.</p>
+                            <ul class="splan-features">
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="uil:servers"></span>
+                                    <span>2 à 8 serveurs inclus</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="fa6-solid:hexagon-nodes-bolt"></span>
+                                    <span>Serveur BungeeCord dédié</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="simple-icons:privateinternetaccess"></span>
+                                    <span>Réseau inter-serveurs privé</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="codicon:server-process"></span>
+                                    <span>Panel Custom inclus</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:server-shield"></span>
+                                    <span>Protection DDoS avancée</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:backup-restore"></span>
+                                    <span>Backups automatiques</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="fluent:person-support-32-filled"></span>
+                                    <span>Support prioritaire</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:map-marker-outline"></span>
+                                    <span>Hébergé en France 🇫🇷</span>
+                                </li>
+                            </ul>
+                            <a href="/services/private-node" class="splan-btn splan-btn-ghost">
+                                <span class="iconify" data-icon="mdi:arrow-right"></span>
+                                Voir les formules
+                            </a>
+                        </div>
+
+                        <!-- CUSTOM METAL -->
+                        <div class="splan-card splan-gold">
+                            <div class="splan-header">
+                                <div class="splan-icon splan-icon-gold">
+                                    <span class="iconify" data-icon="mdi:chip"></span>
+                                </div>
+                                <div>
+                                    <h2 class="splan-name">Custom Metal</h2>
+                                    <p class="splan-tagline">Infrastructure 100% sur mesure</p>
+                                </div>
+                            </div>
+                            <div class="splan-price">
+                                <span class="splan-amount splan-amount-custom">Sur mesure</span>
+                                <span class="splan-period">selon tes besoins</span>
+                            </div>
+                            <p class="splan-desc">Tu choisis chaque composant avec un technicien. L'infrastructure taillée exactement pour toi.</p>
+                            <ul class="splan-features">
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:tune-vertical"></span>
+                                    <span>Ressources 100% sur mesure</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:account-wrench-outline"></span>
+                                    <span>Configuration avec un technicien</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:server-outline"></span>
+                                    <span>Matériel dédié</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:account-group-outline"></span>
+                                    <span>Idéal grands réseaux & communautés</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="fluent:person-support-32-filled"></span>
+                                    <span>Support & suivi dédié</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:map-marker-outline"></span>
+                                    <span>Hébergé en France 🇫🇷</span>
+                                </li>
+                                <li class="sf-ok">
+                                    <span class="iconify" data-icon="mdi:tag-outline"></span>
+                                    <span>Prix défini selon les choix</span>
+                                </li>
+                            </ul>
+                            <a href="/services/custom-metal" class="splan-btn splan-btn-gold">
+                                <span class="iconify" data-icon="mdi:message-outline"></span>
+                                Nous contacter
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ ADD-ONS ═══ -->
+            <section id="services-addons">
+                <div class="services-container">
+
+                    <div class="addons-header">
+                        <span class="section-label">
+                            <span class="iconify" data-icon="mdi:puzzle-plus-outline"></span>
+                            Options à la carte
+                        </span>
+                        <h2 class="addons-title">Personnalise ton serveur</h2>
+                        <p class="addons-subtitle">Ajoute des ressources à la demande, sans changer de plan.</p>
+                    </div>
+
+                    <div class="addons-grid">
+
+                        <div class="addon-card">
+                            <div class="addon-icon">
+                                <span class="iconify" data-icon="streamline-freehand:memory-computer-ram"></span>
+                            </div>
+                            <div class="addon-body">
+                                <h3>RAM supplémentaire</h3>
+                                <p>Augmente la mémoire allouée pour des performances optimales avec plus de plugins ou de joueurs connectés.</p>
+                                <div class="addon-price">
+                                    <span class="addon-amount">0,99€</span>
+                                    <span class="addon-unit">/ Go / mois</span>
+                                </div>
+                            </div>
+                            <a href="/register" class="addon-btn">
+                                <span class="iconify" data-icon="mdi:plus"></span> Ajouter
+                            </a>
+                        </div>
+
+                        <div class="addon-card">
+                            <div class="addon-icon">
+                                <span class="iconify" data-icon="cbi:seagate-ssd"></span>
+                            </div>
+                            <div class="addon-body">
+                                <h3>Stockage SSD</h3>
+                                <p>Étends le stockage pour plus de worlds, de sauvegardes et de fichiers de mods sans limite.</p>
+                                <div class="addon-price">
+                                    <span class="addon-amount">0,49€</span>
+                                    <span class="addon-unit">/ Go / mois</span>
+                                </div>
+                            </div>
+                            <a href="/register" class="addon-btn">
+                                <span class="iconify" data-icon="mdi:plus"></span> Ajouter
+                            </a>
+                        </div>
+
+                        <div class="addon-card">
+                            <div class="addon-icon">
+                                <span class="iconify" data-icon="mdi:ethernet"></span>
+                            </div>
+                            <div class="addon-body">
+                                <h3>Port supplémentaire</h3>
+                                <p>Requis pour certains plugins : ItemsAdder, BlueMap, Dynmap, plugin de vote, cartes web navigateur.</p>
+                                <div class="addon-price">
+                                    <span class="addon-amount">0,49€</span>
+                                    <span class="addon-unit">/ port / mois</span>
+                                </div>
+                            </div>
+                            <a href="/register" class="addon-btn">
+                                <span class="iconify" data-icon="mdi:plus"></span> Ajouter
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <p class="addons-note">
+                        <span class="iconify" data-icon="mdi:information-outline"></span>
+                        Les add-ons sont disponibles depuis ton panel après inscription. Résiliables à tout moment.
+                    </p>
+
+                </div>
+            </section>
+
+        </main>
+
+        <%- include('partials/footer') %>
+    </body>
+</html>

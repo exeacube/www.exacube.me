@@ -1,0 +1,24 @@
+{
+    "name": "exacube-website",
+    "version": "1.0.0",
+    "description": "All the source code of our website.",
+    "license": "BSL-1.0",
+    "author": "neophitt",
+    "type": "commonjs",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "node server.js",
+        "start": "systemctl start exacubeWebsite.service"
+    },
+    "dependencies": {
+        "@iconify/iconify": "^3.1.1",
+        "axios": "^1.13.6",
+        "bcrypt": "^6.0.0",
+        "colors": "^1.4.0",
+        "dotenv": "^17.3.1",
+        "ejs": "^5.0.1",
+        "express": "^5.2.1",
+        "mysql2": "^3.19.1"
+    }
+}

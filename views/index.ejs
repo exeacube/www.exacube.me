@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+                <script src="/iconify/iconify.min.js"></script>
+        <title>Exacube — Accueil</title>
+    </head>
+    <body>
+        <%- include('./partials/navbar.ejs') %>
+        
+        <div id="main">
+            <section id="hero">
+                <div class="hero-bg">
+                    <div class="hero-grid"></div>
+                    <div class="hero-glow"></div>
+                    <div class="hero-blocks">
+                        <div class="block b1"></div>
+                        <div class="block b2"></div>
+                        <div class="block b3"></div>
+                        <div class="block b4"></div>
+                        <div class="block b5"></div>
+                    </div>
+                </div>
+
+                <div class="hero-container">
+                    <div class="hero-badge">
+                        <span class="iconify" data-icon="mdi:infinity"></span>
+                        Hébergement 100% Gratuit à vie
+                    </div>
+
+                    <h1 class="hero-title">
+                        Ton serveur Minecraft,<br>
+                        <span class="hero-title-accent">sans jamais payer.</span>
+                    </h1>
+
+                    <p class="hero-desc">
+                        Lance ton serveur Minecraft en quelques clics. Aucune carte bancaire,
+                        aucune limite dans le temps. Gratuit aujourd'hui, gratuit demain.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="/services/free-server" class="btn-primary">
+                            <span class="iconify" data-icon="mdi:rocket-launch-outline"></span>
+                            Créer mon serveur
+                        </a>
+                        <a href="/services" class="btn-ghost">
+                            Voir nos offres
+                            <span class="iconify" data-icon="mdi:arrow-right"></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-value">0€</span>
+                            <span class="stat-label">Pour toujours</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-value">2 min</span>
+                            <span class="stat-label">Pour démarrer</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-value">24/7</span>
+                            <span class="stat-label">En ligne</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-value">1.8→1.21.X</span>
+                            <span class="stat-label">Versions supportées</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ------------------------------------------------------------ -->
+
+            <section id="how-it-works">
+                <div class="hiw-container">
+
+                    <div class="hiw-header">
+                        <span class="hiw-label">
+                            <span class="iconify" data-icon="mdi:help-circle-outline"></span>
+                            Comment ça marche
+                        </span>
+                        <h2 class="hiw-title">Ton serveur en <span class="hiw-title-accent">3 étapes</span></h2>
+                        <p class="hiw-subtitle">Pas de configuration complexe. Pas de carte bancaire. Juste jouer.</p>
+                    </div>
+
+                    <div class="hiw-steps">
+
+                        <!-- Connecteur entre les étapes -->
+                        <div class="hiw-line"></div>
+
+                        <div class="hiw-step" style="--delay: 0s">
+                            <div class="hiw-step-number">01</div>
+                            <div class="hiw-step-icon">
+                                <span class="iconify" data-icon="mdi:account-plus-outline"></span>
+                            </div>
+                            <div class="hiw-step-body">
+                                <h3>Crée ton compte</h3>
+                                <p>Inscris-toi en 30 secondes avec ton adresse e-mail. Aucune carte bancaire demandée, jamais.</p>
+                                <ul class="hiw-step-list">
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Inscription gratuite</li>
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Vérification e-mail rapide</li>
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Accès immédiat au panel</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="hiw-step" style="--delay: 0.1s">
+                            <div class="hiw-step-number">02</div>
+                            <div class="hiw-step-icon">
+                                <span class="iconify" data-icon="mdi:server-plus"></span>
+                            </div>
+                            <div class="hiw-step-body">
+                                <h3>Configure ton serveur</h3>
+                                <p>Choisis ta version Minecraft, ton type de serveur (Vanilla, Paper, Forge…) et lance-le en un clic.</p>
+                                <ul class="hiw-step-list">
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Versions 1.8 → 1.21.X</li>
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Panel custom inclus</li>
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Plugins & mods supportés</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="hiw-step" style="--delay: 0.2s">
+                            <div class="hiw-step-number">03</div>
+                            <div class="hiw-step-icon">
+                                <span class="iconify" data-icon="mdi:sword-cross"></span>
+                            </div>
+                            <div class="hiw-step-body">
+                                <h3>Joue avec tes amis</h3>
+                                <p>Partage l'adresse IP à tes amis et connectez-vous. Ton serveur tourne 24h/24, 7j/7, sans rien payer.</p>
+                                <ul class="hiw-step-list">
+                                    <li><span class="iconify" data-icon="mdi:check"></span> domaine dédiée fournie</li>
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Uptime 24/7 garanti</li>
+                                    <li><span class="iconify" data-icon="mdi:check"></span> Protection DDoS incluse</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="hiw-cta">
+                        <a href="/services/free-server" class="btn-primary">
+                            <span class="iconify" data-icon="mdi:rocket-launch-outline"></span>
+                            Commencer maintenant — C'est gratuit
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ------------------------------------------------------------ -->
+
+            <section id="pricing">
+                <div class="pricing-container">
+
+                    <div class="pricing-header">
+                        <span class="pricing-label">
+                            <span class="iconify" data-icon="mdi:tag-outline"></span>
+                            Nos offres
+                        </span>
+                        <h2 class="pricing-title">Choisissez votre <span class="pricing-title-accent">formule</span></h2>
+                        <p class="pricing-subtitle">Du serveur gratuit à vie jusqu'à l'infrastructure sur mesure.</p>
+                    </div>
+
+                    <div class="pricing-grid">
+
+                        <!-- GRATUIT -->
+                        <div class="pricing-card featured">
+                            <div class="pricing-card-badge">
+                                <span class="iconify" data-icon="mdi:star"></span> Populaire
+                            </div>
+                            <div class="pricing-card-header">
+                                <div class="pricing-icon">
+                                    <span class="iconify" data-icon="mdi:gift-outline"></span>
+                                </div>
+                                <h3 class="pricing-plan">Gratuit</h3>
+                                <div class="pricing-price">
+                                    <span class="price-amount">0€</span>
+                                    <span class="price-period">pour toujours</span>
+                                </div>
+                                <p class="pricing-desc">Parfait pour débuter et jouer avec tes amis sans dépenser un centime.</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="streamline-freehand:memory-computer-ram"></span>
+                                    <span>3 Go de RAM</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="streamline-freehand:microprocessor-computer-chip-flash"></span>
+                                    <span>2 cœurs CPU</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="cbi:seagate-ssd"></span>
+                                    <span>16 Go de stockage SSD</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="la:users"></span>
+                                    <span>Slots joueurs illimités</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="codicon:server-process"></span>
+                                    <span>Panel Custom inclus</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:server-shield"></span>
+                                    <span>Protection DDoS</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="ic:baseline-insights"></span>
+                                    <span>Domaine offert</span>
+                                </li>
+                                <li class="feat-limit">
+                                    <span class="iconify" data-icon="mdi:minus-circle-outline"></span>
+                                    <span>1 serveur par compte</span>
+                                </li>
+                            </ul>
+                            <a href="/services/free-server" class="pricing-btn pricing-btn-primary">
+                                <span class="iconify" data-icon="mdi:rocket-launch-outline"></span>
+                                Commencer gratuitement
+                            </a>
+                        </div>
+
+                        <!-- PRIVATE NODE -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-header">
+                                <div class="pricing-icon">
+                                    <span class="iconify" data-icon="mdi:server-network"></span>
+                                </div>
+                                <h3 class="pricing-plan">Private Node</h3>
+                                <div class="pricing-price">
+                                    <span class="price-from">à partir de</span>
+                                    <span class="price-amount">4,99€</span>
+                                    <span class="price-period">/ mois</span>
+                                </div>
+                                <p class="pricing-desc">Un réseau privé de serveurs interconnectés via BungeeCord, pour les projets ambitieux.</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="uil:servers"></span>
+                                    <span>2 à 8 serveurs inclus</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="fa6-solid:hexagon-nodes-bolt"></span>
+                                    <span>Serveur BungeeCord dédié</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="simple-icons:privateinternetaccess"></span>
+                                    <span>Réseau inter-serveurs privé</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="codicon:server-process"></span>
+                                    <span>Panel Custom inclus</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="ic:baseline-insights"></span>
+                                    <span>Protection DDoS avancée</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="fluent:person-support-32-filled"></span>
+                                    <span>Support prioritaire</span>
+                                </li>
+                            </ul>
+                            <a href="/contact" class="pricing-btn pricing-btn-ghost">
+                                <span class="iconify" data-icon="mdi:arrow-right"></span>
+                                Voir les formules
+                            </a>
+                        </div>
+
+                        <!-- CUSTOM METAL -->
+                        <div class="pricing-card custom-card">
+                            <div class="pricing-card-header">
+                                <div class="pricing-icon pricing-icon-gold">
+                                    <span class="iconify" data-icon="mdi:chip"></span>
+                                </div>
+                                <h3 class="pricing-plan">Custom Metal</h3>
+                                <div class="pricing-price">
+                                    <span class="price-amount price-custom">Sur mesure</span>
+                                    <span class="price-period">selon tes besoins</span>
+                                </div>
+                                <p class="pricing-desc">Tu choisis chaque composant avec un technicien. L'infrastructure taillée exactement pour toi.</p>
+                            </div>
+                            <ul class="pricing-features">
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                                    <span>Ressources 100% sur mesure</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                                    <span>Configuration avec un technicien</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                                    <span>Matériel dédié</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                                    <span>Idéal grands réseaux & communautés</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                                    <span>Support & suivi dédié</span>
+                                </li>
+                                <li class="feat-ok">
+                                    <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                                    <span>Prix défini selon les choix</span>
+                                </li>
+                            </ul>
+                            <a href="/contact" class="pricing-btn pricing-btn-gold">
+                                <span class="iconify" data-icon="mdi:message-outline"></span>
+                                Nous contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------- -->
+
+        <section id="features">
+            <div class="features-container">
+
+                <div class="features-header">
+                    <span class="features-label">
+                        <span class="iconify" data-icon="mdi:shield-check-outline"></span>
+                        Pourquoi nous choisir
+                    </span>
+                    <h2 class="features-title">Tout ce qu'il faut,<span class="features-title-accent"> sans compromis</span></h2>
+                    <p class="features-subtitle">Une infrastructure pensée pour les joueurs, développée et hébergée par notre équipe.</p>
+                </div>
+
+                <div class="features-grid">
+
+                    <div class="feature-card" style="--delay: 0s">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="ic:baseline-insights"></span>
+                        </div>
+                        <div class="feature-body">
+                            <h3>Protection DDoS</h3>
+                            <p>Ton serveur est protégé en permanence contre les attaques. Joue sereinement, on s'occupe de la sécurité.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" style="--delay: 0.05s">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="mdi:clock-check-outline"></span>
+                        </div>
+                        <div class="feature-body">
+                            <h3>Uptime 24/7</h3>
+                            <p>Ton serveur est disponible à toute heure, tous les jours. Tes amis peuvent rejoindre quand ils veulent.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" style="--delay: 0.1s">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="mdi:puzzle-outline"></span>
+                        </div>
+                        <div class="feature-body">
+                            <h3>Plugins & Mods</h3>
+                            <p>Installe tes plugins et mods favoris librement. Paper, Forge, Fabric — on supporte les setups les plus courants.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" style="--delay: 0.15s">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="mdi:backup-restore"></span>
+                        </div>
+                        <div class="feature-body">
+                            <h3>Backups automatiques</h3>
+                            <p>Tes données sont sauvegardées automatiquement. En cas de problème, restaure ton serveur en un clic.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card feature-card-accent" style="--delay: 0.2s">
+                        <div class="feature-icon feature-icon-accent">
+                            <span class="iconify" data-icon="mdi:code-braces"></span>
+                        </div>
+                        <div class="feature-body">
+                            <h3>Panel 100% maison <span class="feature-badge">Exclusif</span></h3>
+                            <p>Notre panel de gestion est développé en interne par notre équipe. Intuitif, rapide, et taillé pour vous.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card" style="--delay: 0.25s">
+                        <div class="feature-icon">
+                            <span class="iconify" data-icon="mdi:map-marker-outline"></span>
+                        </div>
+                        <div class="feature-body">
+                            <h3>Hébergé en France <span class="iconify" data-icon="flag:fr-4x3"></span></h3>
+                            <p>Nos serveurs sont 100% basés en France. Latence minimale pour les joueurs francophones, données souveraines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final">
+            <div class="cta-bg">
+                <div class="cta-grid"></div>
+                <div class="cta-glow-left"></div>
+                <div class="cta-glow-right"></div>
+                <div class="cta-blocks">
+                    <div class="cta-block cb1"></div>
+                    <div class="cta-block cb2"></div>
+                    <div class="cta-block cb3"></div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <div class="cta-icon">
+                    <span class="iconify" data-icon="mdi:sword-cross"></span>
+                </div>
+
+                <h2 class="cta-title">
+                    Prêt à lancer<br>
+                    <span class="cta-title-accent">ton aventure ?</span>
+                </h2>
+
+                <p class="cta-desc">
+                    Rejoins des centaines de joueurs qui hébergent leur serveur Minecraft
+                    gratuitement sur exacube. Aucune carte bancaire. Aucune limite dans le temps.
+                </p>
+
+                <div class="cta-actions">
+                    <a href="/services/free-server" class="btn-primary">
+                        <span class="iconify" data-icon="mdi:rocket-launch-outline"></span>
+                        Créer mon serveur — C'est gratuit
+                    </a>
+                    <a href="/discord" target="_blank" class="btn-ghost">
+                        <span class="iconify" data-icon="ic:baseline-discord"></span>
+                        Rejoindre le Discord
+                    </a>
+                </div>
+
+                <div class="cta-note">
+                    <span class="iconify" data-icon="mdi:lock-outline"></span>
+                    Sans engagement · Gratuit à vie · Hébergé en France
+                </div>
+            </div>
+        </section>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>
