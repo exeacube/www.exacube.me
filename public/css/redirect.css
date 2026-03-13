@@ -1,0 +1,158 @@
+/* ═══════════════════════════════════════
+   REDIRECT PAGE
+═══════════════════════════════════════ */
+#redirect-page {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.redirect-bg { position: absolute; inset: 0; z-index: 0; }
+
+.redirect-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(88, 101, 242, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(88, 101, 242, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.redirect-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse,
+        rgba(88, 101, 242, 0.12) 0%,
+        transparent 65%);
+    pointer-events: none;
+}
+
+/* ─── Card ─── */
+.redirect-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+}
+
+.redirect-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(88, 101, 242, 0.2);
+    border-radius: 20px;
+    padding: 4rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    animation: fadeUp 0.5s ease both;
+}
+
+/* Icône */
+.redirect-icon {
+    width: 72px; height: 72px;
+    background: rgba(88, 101, 242, 0.12);
+    border: 1px solid rgba(88, 101, 242, 0.35);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.4rem;
+    color: #7289da;
+}
+
+/* Titre */
+.redirect-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.redirect-desc {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.7;
+    max-width: 340px;
+}
+
+/* ─── Countdown ring ─── */
+.redirect-countdown {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-ring {
+    position: absolute;
+    inset: 0;
+    transform: rotate(-90deg);
+}
+
+.ring-track {
+    fill: none;
+    stroke: #1e1e1e;
+    stroke-width: 4;
+}
+
+.ring-progress {
+    fill: none;
+    stroke: #7289da;
+    stroke-width: 4;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.countdown-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* ─── Bouton ─── */
+.redirect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1.1rem 2.4rem;
+    background: #5865f2;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.redirect-btn:hover {
+    background: #6d78f5;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ─── Note ─── */
+.redirect-note {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.redirect-note a {
+    color: #7289da;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.redirect-note a:hover { color: #99aaf0; }

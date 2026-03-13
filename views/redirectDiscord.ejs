@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/redirect.css" />
+        <script src="/iconify/iconify.min.js"></script>
+        <title>Exacube — Discord</title>
+    </head>
+    <body>
+        <%- include('partials/navbar') %>
+        <main id="redirect-page">
+            <div class="redirect-bg">
+                <div class="redirect-grid"></div>
+                <div class="redirect-glow"></div>
+            </div>
+
+            <div class="redirect-container">
+                <div class="redirect-card">
+
+                    <div class="redirect-icon">
+                        <span class="iconify" data-icon="ic:baseline-discord"></span>
+                    </div>
+
+                    <h1 class="redirect-title">Redirection vers Discord</h1>
+                    <p class="redirect-desc">Tu vas être redirigé vers le serveur Discord d'EgoriaMC dans…</p>
+
+                    <div class="redirect-countdown">
+                        <svg class="countdown-ring" viewBox="0 0 80 80">
+                            <circle class="ring-track" cx="40" cy="40" r="34"/>
+                            <circle class="ring-progress" id="ring" cx="40" cy="40" r="34"/>
+                        </svg>
+                        <span class="countdown-number" id="countdown">5</span>
+                    </div>
+
+                    <a href="https://discord.gg/D3n382mmYx" id="redirect-btn" class="redirect-btn" target="_blank" rel="noopener">
+                        <span class="iconify" data-icon="ic:baseline-discord"></span>
+                        Rejoindre maintenant
+                    </a>
+
+                    <p class="redirect-note">
+                        La redirection ne se lance pas ?
+                        <a href="https://discord.gg/D3n382mmYx" target="_blank" rel="noopener">Clique ici</a>
+                    </p>
+
+                </div>
+            </div>
+        </main>
+
+        <script>
+            const DISCORD_URL = 'https://discord.gg/D3n382mmYx';
+            const DURATION    = 5;
+            const ring        = document.getElementById('ring');
+            const countEl     = document.getElementById('countdown');
+            const circumference = 2 * Math.PI * 34;
+
+            ring.style.strokeDasharray  = circumference;
+            ring.style.strokeDashoffset = 0;
+
+            let remaining = DURATION;
+
+            const interval = setInterval(() => {
+                remaining--;
+                countEl.textContent = remaining;
+
+                const progress = (DURATION - remaining) / DURATION;
+                ring.style.strokeDashoffset = circumference * progress;
+
+                if (remaining <= 0) {
+                    clearInterval(interval);
+                    window.location.href = DISCORD_URL;
+                }
+            }, 1000);
+        </script>
+
+        <%- include('partials/footer') %>
+    </body>
+</html>

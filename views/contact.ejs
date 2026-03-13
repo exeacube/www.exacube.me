@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/contact.css" />
+        <script src="/iconify/iconify.min.js"></script>
+        <title>Exacube — Contact</title>
+    </head>
+    <body>
+        <%- include('partials/navbar') %>
+
+        <main id="contact-page">
+            <!-- ═══ HERO ═══ -->
+            <section id="contact-hero">
+                <div class="contact-hero-bg">
+                    <div class="ch-grid"></div>
+                    <div class="ch-glow"></div>
+                </div>
+                <div class="contact-hero-content">
+                    <span class="section-label">
+                        <span class="iconify" data-icon="mdi:message-outline"></span>
+                        Contact
+                    </span>
+                    <h1 class="contact-hero-title">On est là <span class="contact-hero-accent">pour toi</span></h1>
+                    <p class="contact-hero-desc">Une question, un problème, un projet ? Écris-nous, on répond sous 24h.</p>
+                </div>
+            </section>
+
+            <!-- ═══ CONTENU PRINCIPAL ═══ -->
+            <section id="contact-main">
+                <div class="contact-container">
+
+                    <!-- COLONNE GAUCHE : Formulaire + Discord -->
+                    <div class="contact-left">
+
+                        <!-- Feedback -->
+                        <% if (success) { %>
+                        <div class="contact-alert contact-alert-success">
+                            <span class="iconify" data-icon="mdi:check-circle-outline"></span>
+                            <%= success %>
+                        </div>
+                        <% } %>
+                        <% if (error) { %>
+                        <div class="contact-alert contact-alert-error">
+                            <span class="iconify" data-icon="mdi:alert-circle-outline"></span>
+                            <%= error %>
+                        </div>
+                        <% } %>
+
+                        <!-- Formulaire -->
+                        <div class="contact-form-card">
+                            <div class="contact-form-header">
+                                <div class="contact-form-icon">
+                                    <span class="iconify" data-icon="mdi:email-outline"></span>
+                                </div>
+                                <div>
+                                    <h2>Envoie-nous un message</h2>
+                                    <p>On te répondra par email sous 24h.</p>
+                                </div>
+                            </div>
+
+                            <form action="/contact" method="POST" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nom">Nom <span class="form-required">*</span></label>
+                                        <input type="text" id="nom" name="nom" placeholder="Ton nom" required autocomplete="name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email <span class="form-required">*</span></label>
+                                        <input type="email" id="email" name="email" placeholder="ton@email.com" required autocomplete="email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sujet">Sujet <span class="form-required">*</span></label>
+                                    <input type="text" id="sujet" name="sujet" placeholder="Résume ton problème en quelques mots" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message <span class="form-required">*</span></label>
+                                    <textarea id="message" name="message" rows="6" placeholder="Décris ta demande en détail..." required></textarea>
+                                </div>
+                                <button type="submit" class="contact-submit">
+                                    <span class="iconify" data-icon="mdi:send-outline"></span>
+                                    Envoyer le message
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Discord -->
+                        <div class="contact-discord-card">
+                            <div class="contact-discord-left">
+                                <div class="contact-discord-icon">
+                                    <span class="iconify" data-icon="ic:baseline-discord"></span>
+                                </div>
+                                <div>
+                                    <h3>Rejoins notre Discord</h3>
+                                    <p>Support communautaire, annonces et entraide en temps réel.</p>
+                                </div>
+                            </div>
+                            <a href="/discord" target="_blank" rel="noopener" class="contact-discord-btn">
+                                <span class="iconify" data-icon="mdi:arrow-right"></span>
+                                Rejoindre
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- COLONNE DROITE : FAQ -->
+                    <div class="contact-right">
+                        <div class="contact-faq">
+                            <div class="faq-header">
+                                <span class="iconify" data-icon="mdi:help-circle-outline"></span>
+                                <h2>Questions fréquentes</h2>
+                            </div>
+
+                            <div class="faq-list">
+
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false">
+                                        <span>C'est vraiment gratuit ?</span>
+                                        <span class="iconify faq-chevron" data-icon="mdi:chevron-down"></span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Oui, à 100% et pour toujours. Aucune carte bancaire n'est demandée à l'inscription. L'offre gratuite inclut 3 Go de RAM, 2 cœurs CPU, 16 Go de SSD et des slots joueurs illimités — sans limite dans le temps.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false">
+                                        <span>Comment installer des plugins ?</span>
+                                        <span class="iconify faq-chevron" data-icon="mdi:chevron-down"></span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Depuis ton panel Exacube, accède au gestionnaire de fichiers de ton serveur. Place ton fichier <code>.jar</code> dans le dossier <code>/plugins</code>, puis redémarre ton serveur. Le plugin sera automatiquement chargé au démarrage.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false">
+                                        <span>Comment upgrade mon plan ?</span>
+                                        <span class="iconify faq-chevron" data-icon="mdi:chevron-down"></span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Tu peux ajouter des ressources à la carte depuis ton panel (RAM, SSD, ports) sans changer d'offre. Pour passer en Private Node ou Custom Metal, rends-toi sur la page <a href="/services">Nos services</a> ou contacte-nous directement.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false">
+                                        <span>Qu'est-ce que le Private Node ?</span>
+                                        <span class="iconify faq-chevron" data-icon="mdi:chevron-down"></span>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Le Private Node est une offre dédiée aux gros projets Minecraft. Elle inclut un réseau privé de 2 à 8 serveurs interconnectés via un serveur BungeeCord dédié, à partir de 4,99€/mois. Idéal pour les réseaux de mini-jeux ou les grandes communautés.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <script>
+            document.querySelectorAll('.faq-question').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const item    = btn.closest('.faq-item');
+                    const answer  = item.querySelector('.faq-answer');
+                    const isOpen  = btn.getAttribute('aria-expanded') === 'true';
+
+                    // Fermer tous les autres
+                    document.querySelectorAll('.faq-item').forEach(el => {
+                        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        el.querySelector('.faq-answer').style.maxHeight = null;
+                        el.classList.remove('open');
+                    });
+
+                    // Ouvrir celui cliqué si fermé
+                    if (!isOpen) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        item.classList.add('open');
+                    }
+                });
+            });
+        </script>
+
+        <%- include('partials/footer') %>
+    </body>
+</html>

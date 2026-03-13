@@ -1,0 +1,440 @@
+/* ═══════════════════════════════════════
+   CONTACT PAGE
+═══════════════════════════════════════ */
+
+/* ─── HERO ─── */
+#contact-hero {
+    position: relative;
+    padding: 7rem 2rem 5rem;
+    overflow: hidden;
+}
+
+.contact-hero-bg { position: absolute; inset: 0; z-index: 0; }
+
+.ch-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(127,72,180,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(127,72,180,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.ch-glow {
+    position: absolute;
+    top: -10%; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 350px;
+    background: radial-gradient(ellipse, rgba(127,72,180,0.14) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.contact-hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.contact-hero-accent {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    background: linear-gradient(135deg, #b07de0, #7F48B4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    line-height: 1.6;
+}
+
+.contact-hero-desc {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ─── MAIN ─── */
+#contact-main {
+    padding: 5rem 2rem 8rem;
+    position: relative;
+}
+
+#contact-main::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #2a2a2a 20%, #2a2a2a 80%, transparent);
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ─── ALERTES ─── */
+.contact-alert {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 1.6rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.contact-alert-success {
+    background: rgba(30, 160, 90, 0.1);
+    border: 1px solid rgba(30, 160, 90, 0.3);
+    color: #4caf80;
+}
+
+.contact-alert-error {
+    background: rgba(200, 50, 50, 0.1);
+    border: 1px solid rgba(200, 50, 50, 0.3);
+    color: #e07070;
+}
+
+/* ─── COLONNE GAUCHE ─── */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* Carte formulaire */
+.contact-form-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #1e1e1e;
+    border-radius: 16px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    transition: border-color 0.25s;
+}
+
+.contact-form-card:focus-within {
+    border-color: rgba(127,72,180,0.4);
+}
+
+.contact-form-header {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.contact-form-icon {
+    width: 48px; height: 48px;
+    min-width: 48px;
+    background: rgba(127,72,180,0.1);
+    border: 1px solid rgba(127,72,180,0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #b07de0;
+}
+
+.contact-form-header h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact-form-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.2rem;
+}
+
+/* Formulaire */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.03em;
+}
+
+.form-required { color: #7F48B4; }
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    color: #CFCFCF;
+    width: 100%;
+    transition: border-color 0.2s, background 0.2s;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #333; }
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(127,72,180,0.6);
+    background: rgba(127,72,180,0.04);
+}
+
+/* Bouton submit */
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 1.2rem 2.4rem;
+    background: #7F48B4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    align-self: flex-start;
+}
+
+.contact-submit:hover {
+    background: #9558cc;
+    transform: translateY(-2px);
+}
+
+.contact-submit:active { transform: scale(0.98); }
+
+/* Carte Discord */
+.contact-discord-card {
+    background: rgba(88, 101, 242, 0.06);
+    border: 1px solid rgba(88, 101, 242, 0.25);
+    border-radius: 14px;
+    padding: 2rem 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.contact-discord-card:hover {
+    border-color: rgba(88, 101, 242, 0.5);
+    background: rgba(88, 101, 242, 0.1);
+}
+
+.contact-discord-left {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.contact-discord-icon {
+    width: 46px; height: 46px;
+    min-width: 46px;
+    background: rgba(88, 101, 242, 0.15);
+    border: 1px solid rgba(88, 101, 242, 0.35);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #7289da;
+}
+
+.contact-discord-left h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact-discord-left p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.2rem;
+}
+
+.contact-discord-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.6rem;
+    background: transparent;
+    color: #7289da;
+    border: 1px solid rgba(88, 101, 242, 0.35);
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.contact-discord-btn:hover {
+    background: rgba(88, 101, 242, 0.15);
+    color: #99aaf0;
+    transform: translateY(-2px);
+}
+
+/* ─── FAQ ─── */
+.contact-faq {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #1e1e1e;
+    border-radius: 16px;
+    padding: 2.8rem;
+    position: sticky;
+    top: 80px;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.faq-header .iconify {
+    font-size: 2.2rem;
+    color: #7F48B4;
+}
+
+.faq-header h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.4rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: #CFCFCF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.faq-question:hover { color: #fff; }
+
+.faq-chevron {
+    font-size: 1.8rem;
+    color: #555;
+    flex-shrink: 0;
+    transition: transform 0.25s, color 0.2s;
+}
+
+.faq-item.open .faq-chevron {
+    transform: rotate(180deg);
+    color: #7F48B4;
+}
+
+.faq-item.open .faq-question { color: #fff; }
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 1.4rem;
+    font-size: 1.3rem;
+    color: #666;
+    line-height: 1.75;
+}
+
+.faq-answer code {
+    background: rgba(127,72,180,0.12);
+    color: #b07de0;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+.faq-answer a {
+    color: #7F48B4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-faq { position: static; }
+}
+
+@media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-card { padding: 2rem; }
+    .contact-discord-card { flex-direction: column; align-items: flex-start; }
+    .contact-submit { width: 100%; }
+}
